@@ -6,12 +6,9 @@ import { Button } from './FeedbackOptopns.styled';
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div>
-      {options.map(option => {
+      {options.map((option, idx) => {
         return (
-          <Button
-            key={options.indexOf(option)}
-            onClick={() => onLeaveFeedback(option)}
-          >
+          <Button key={idx} onClick={() => onLeaveFeedback(option)}>
             {option}
           </Button>
         );
